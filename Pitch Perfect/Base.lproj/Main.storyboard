@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WRz-JP-psb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87v-rT-7x8">
-                                <rect key="frame" x="109.5" y="256" width="155" height="155"/>
+                                <rect key="frame" x="110" y="256" width="155" height="155"/>
                                 <state key="normal" image="RecordButton"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sgf-2o-Myy"/>
@@ -35,7 +35,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjl-Ai-QhE">
-                                <rect key="frame" x="110" y="448" width="155" height="155"/>
+                                <rect key="frame" x="141" y="448" width="92" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="Qhl-2K-Bf2"/>
+                                    <constraint firstAttribute="width" constant="92" id="fVR-72-gYR"/>
+                                </constraints>
                                 <state key="normal" image="Stop"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AOI-At-FWc"/>
@@ -44,14 +48,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fjl-Ai-QhE" firstAttribute="top" secondItem="87v-rT-7x8" secondAttribute="bottom" constant="37" id="8Lh-ao-C51"/>
                             <constraint firstItem="87v-rT-7x8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gdh-gL-aQq"/>
                             <constraint firstItem="ZKc-Zt-Q3W" firstAttribute="centerX" secondItem="87v-rT-7x8" secondAttribute="centerX" id="QXE-J7-Kci"/>
-                            <constraint firstItem="fjl-Ai-QhE" firstAttribute="centerX" secondItem="87v-rT-7x8" secondAttribute="centerX" id="vZ1-bW-gm5"/>
+                            <constraint firstItem="fjl-Ai-QhE" firstAttribute="top" secondItem="87v-rT-7x8" secondAttribute="bottom" constant="37" id="S8d-iu-4cF"/>
+                            <constraint firstItem="fjl-Ai-QhE" firstAttribute="centerX" secondItem="87v-rT-7x8" secondAttribute="centerX" id="loc-37-eMx"/>
                             <constraint firstItem="87v-rT-7x8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yBx-sl-V1j"/>
                             <constraint firstItem="ZKc-Zt-Q3W" firstAttribute="top" secondItem="87v-rT-7x8" secondAttribute="bottom" constant="8" id="ykZ-j5-s8t"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="cvd-F1-5Lx"/>
                     <connections>
                         <outlet property="recordButton" destination="87v-rT-7x8" id="5uI-FN-oeC"/>
                         <outlet property="recordingLabel" destination="ZKc-Zt-Q3W" id="ihB-ap-JKs"/>
@@ -59,6 +64,24 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.2" y="137.18140929535232"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Sr2-EV-md3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WRz-JP-psb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="61W-HJ-mH7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NFw-cV-7W5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZEU-kC-5Fp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="137.18140929535232"/>
         </scene>
