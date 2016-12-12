@@ -46,6 +46,7 @@
 				370FE5021DC95FE0000A0FFA /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		370FE5021DC95FE0000A0FFA /* Products */ = {
 			isa = PBXGroup;
